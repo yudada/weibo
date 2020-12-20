@@ -9,5 +9,8 @@
         <p>
             <a  class="btn btn-success btn-lg">登录</a>
         </p>
+        <p>
+            <a  class="btn btn-success btn-lg" href="{{route('singup')}}">现在注册</a>
+        </p>
     </div>
 @stop
