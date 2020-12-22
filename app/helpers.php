@@ -1,12 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 2020/12/22
- * Time: 16:00
- */
 
-function get_db_config () {
+function get_db_config()
+{
     if (getenv('IS_IN_HEROKU')) {
         $url = parse_url(getenv("DATABASE_URL"));
 
