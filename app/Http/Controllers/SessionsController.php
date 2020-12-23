@@ -16,14 +16,13 @@ class SessionsController extends Controller
            'email' => 'required|email|max:255',
             'password' => 'required'
         ]);
-        if (Auth::attempt($credentials)) {
+        if (Auth::attempt($credentials, $request->has('remember'))) {
             session()->flash('success', '登录成功');
             return redirect()->route('users.show', [Auth::user()]);
         }else {
             session()->flash('danger', '用户名或密码错误');
             return redirect()->back()->withInput();
         }
-        return;
     }
 
     public function destroy()
