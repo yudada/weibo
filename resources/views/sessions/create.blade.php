@@ -8,7 +8,7 @@
                 <h5>登录</h5>
             </div>
             <div class="card-body">
-                @include('shared._errors')
+                @include('shared._error')
 
                 <form method="POST" action="{{ route('login') }}">
                     {{ csrf_field() }}
