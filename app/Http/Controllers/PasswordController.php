@@ -15,7 +15,7 @@ class PasswordController extends Controller
 
     public function __construct()
     {
-        $this->middleware('throttle2,1',[
+        $this->middleware('throttle:2,1',[
             'only' => ['showLinkRequestForm']
         ]);
 
